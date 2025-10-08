@@ -1,0 +1,119 @@
+.game-info {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.status-message {
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.status-playing {
+  background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+  color: white;
+}
+
+.status-waiting {
+  background: linear-gradient(135deg, #fdcb6e 0%, #e17055 100%);
+  color: white;
+}
+
+.status-win {
+  background: linear-gradient(135deg, #00b894 0%, #00a085 100%);
+  color: white;
+  animation: pulse 1s infinite;
+}
+
+.status-draw {
+  background: linear-gradient(135deg, #636e72 0%, #2d3436 100%);
+  color: white;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.players-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.player-card {
+  flex: 1;
+  text-align: center;
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.player-symbol {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 auto 10px;
+}
+
+.player-x {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  color: white;
+}
+
+.player-o {
+  background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+  color: white;
+}
+
+.player-status {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.vs {
+  font-size: 20px;
+  font-weight: bold;
+  color: #667eea;
+  background: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+  .players-info {
+    gap: 10px;
+  }
+  
+  .player-card {
+    padding: 10px;
+  }
+  
+  .player-symbol {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  
+  .vs {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+}
