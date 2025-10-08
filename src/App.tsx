@@ -26,7 +26,8 @@ const App: React.FC = () => {
   const [roomId, setRoomId] = useState<string>('');
 
   useEffect(() => {
-    const newSocket: Socket = io('https://caro.ngabayquetoi.io.vn');
+    const socketUrl = process.env.REACT_APP_SOCKET_URL || 'https://caro.ngabayquetoi.io.vn';
+    const newSocket: Socket = io(socketUrl);
     setSocket(newSocket);
 
     newSocket.on('connect', () => {
